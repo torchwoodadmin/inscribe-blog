@@ -6,16 +6,11 @@ import { AppBar } from '../ui';
 	template: `
 		<div>
 		<app-bar></app-bar>
-			<main class="main">
-
+			<main>
 			<h1>Write your first blog post 😇 </h1>
-
-			<app-editor>
-
-			</app-editor>
-
+			<blog-container> 
+			</blog-container>
 			</main>
-			
 		</div>
 			
 	`
