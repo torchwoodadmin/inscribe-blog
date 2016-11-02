@@ -1,2 +1,2 @@
 export { Main } from './main';
-export { Blog } from './blog';
+export { Blogs } from './blog';

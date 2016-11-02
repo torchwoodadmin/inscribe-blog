@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { Main } from './containers';
-import { Blog } from './containers';
+import { Blogs } from './containers';
 import { AppBar } from './ui';
 import { BlogContent } from './ui';
 import { BlogCreator } from './ui';
@@ -16,7 +16,7 @@ import { BlogCreator } from './ui';
 	AppComponent, 
 	Main, 
 	AppBar, 
-	Blog, 
+	Blogs, 
 	BlogContent,
 	BlogCreator
 	],

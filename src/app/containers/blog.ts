@@ -4,8 +4,7 @@ import { Component } from '@angular/core';
 	template: `
 
 	<div>
-		<blog-creator>
-			</blog-creator>
+		<blog-creator (createBlog)="onCreateBlog($event)"></blog-creator>
 		</div>
 
 	<div>
@@ -17,9 +16,13 @@ import { Component } from '@angular/core';
 	             </div>
 	`
 })
- export class Blog{
- 	blogs = [
-		  
+ export class Blogs{
+	blogs = [
 
- 	]
+
+	];
+
+	onCreateBlog(blog){
+		this.blogs.push(blog);
+	}
  }

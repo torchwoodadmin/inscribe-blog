@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
+import { Component,
+		 Output,
+		 EventEmitter
+	 } from '@angular/core';
 
 @Component({
 	selector: 'blog-creator',
 	template: `
 	<div>
-		<form>
+		<form (submit)="onCreateBlog()">
 			<div>
 			    <label for ="input"> title </label>
 				<input type="text"
@@ -34,9 +37,28 @@ import { Component } from '@angular/core';
 	`
 })
 export class BlogCreator { 
-	newBlog ={
-		title:'',
-		body:''
+	@Output() createBlog = new EventEmitter();
+
+	newBlog = {
+		title: '',
+		body: ''
 	}
-	
+
+	onCreateBlog(){
+		const { title, body } = this.newBlog;
+
+		if(title && body) {
+			this.createBlog.next({ title, body });
+		}
+
+		this.reset();
+
+	}
+
+	reset(){
+		this.newBlog = {
+			title: '',
+			body: ''
+		}
+	}
 }
