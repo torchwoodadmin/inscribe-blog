@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BlogService } from '../services';
 @Component ({
 	selector:'blog-container',
 	template: `
@@ -17,12 +18,16 @@ import { Component } from '@angular/core';
 	`
 })
  export class Blogs{
-	blogs = [
+	blogs = [];
 
+	constructor(private blogService: BlogService) {
+		this.blogService.getBlogs()
+			.subscribe(resp => this.blogs = resp.data);
+	}
 
-	];
 
 	onCreateBlog(blog){
-		this.blogs.push(blog);
+		this.blogService.createBlog(blog)
+			.subscribe(note => this.blogs.push(blog));
 	}
  }

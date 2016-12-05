@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule} from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
+import { providers } from './';
 import { Main } from './containers';
 import { Blogs } from './containers';
 import { AppBar } from './ui';
@@ -10,7 +12,7 @@ import { BlogCreator } from './ui';
 
 
 @NgModule({
-	imports :    [ BrowserModule,FormsModule ],
+	imports :    [ BrowserModule,FormsModule,HttpModule ],
 
 	declarations: [
 	AppComponent, 
@@ -20,7 +22,7 @@ import { BlogCreator } from './ui';
 	BlogContent,
 	BlogCreator
 	],
-	
+	providers,
 	bootstrap :  [ AppComponent ]
 })
 
