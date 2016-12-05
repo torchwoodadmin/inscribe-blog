@@ -1,9 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable,Inject } from '@angular/core';
 import { ApiService } from './api';
+
+@Injectable()
 
 export class BlogService {
 	path: string = '/blog';
-	constructor(private api: ApiService) {}
+	constructor(@Inject(ApiService) private api: ApiService) {}
 
 	createBlog(blog) {
 		return this.api.post(this.path, blog);
