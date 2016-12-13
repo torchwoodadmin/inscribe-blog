@@ -3,16 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule} from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
-import { providers } from './';
-import { Main } from './containers';
-import { Blogs } from './containers';
-import { AppBar } from './ui';
-import { BlogContent } from './ui';
-import { BlogCreator } from './ui';
+import { providers,routes } from './';
+import { Main, Blogs,Home } from './containers';
+import { BlogContent, BlogCreator, AppBar } from './ui';
 
 
 @NgModule({
-	imports :    [ BrowserModule,FormsModule,HttpModule ],
+	imports :[ 
+	BrowserModule,
+	FormsModule,
+	HttpModule,
+	routes
+	],
 
 	declarations: [
 	AppComponent, 
@@ -20,7 +22,8 @@ import { BlogCreator } from './ui';
 	AppBar, 
 	Blogs, 
 	BlogContent,
-	BlogCreator
+	BlogCreator,
+	Home
 	],
 	providers,
 	bootstrap :  [ AppComponent ]

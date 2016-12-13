@@ -8,8 +8,7 @@ import { AppBar } from '../ui';
 		<app-bar></app-bar>
 			<main>
 			<h1>Write your first blog post 😇 </h1>
-			<blog-container> 
-			</blog-container>
+			<router-outlet></router-outlet>
 			</main>
 		</div>
 			

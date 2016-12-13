@@ -47,7 +47,7 @@ export class ApiService {
 		return this.http.post(
 			`${this.api_url}${path}`,
 			JSON.stringify(body),
-			{ headers: this.Headers }
+			{headers: this.Headers}
 		)
 			.map(this.checkForError)
 			.catch(err => Observable.throw(err))

@@ -25,7 +25,7 @@
 
  	template:`
  <header class="app-bar row middle-xs">
-  <span class="logo col-xs-10">
+  <span [routerLink]="['','home']" class="logo col-xs-10">
     Inscribe.Io 
   </span>
   <nav class="col-xs-2">
